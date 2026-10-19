@@ -187,9 +187,9 @@ function x({children:e,delay:t=0,className:n=""}){
 
 function S({label:e}){
   return(0,i.jsxs)("div",{className:"flex items-center justify-center gap-3 py-6 text-primary/70",children:[
-    (0,i.jsx)(\"span\",{className:\"h-px w-14 bg-gradient-to-r from-transparent to-primary/50\"}),
-    (0,i.jsx)(\"span\",{className:\"text-[0.7rem] tracking-airy\",children:e??\"❖\"}),
-    (0,i.jsx)(\"span\",{className:\"h-px w-14 bg-gradient-to-l from-transparent to-primary/50\"})
+    (0,i.jsx)("span",{className:"h-px w-14 bg-gradient-to-r from-transparent to-primary/50"}),
+    (0,i.jsx)("span",{className:"text-[0.7rem] tracking-airy",children:e??"❖"}),
+    (0,i.jsx)("span",{className:"h-px w-14 bg-gradient-to-l from-transparent to-primary/50"})
   ]})
 }
 
