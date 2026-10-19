@@ -32,8 +32,8 @@ window.WEDDING_DATA = {
   },
 
   wedding: {
-    dateLabel: "Puri, Odisha",
-    weddingISO: "2026-11-28T18:30:00+05:30",
+    dateLabel: "8 – 9 December 2026",
+    weddingISO: "2026-12-09T18:30:00+05:30",
   },
 
   venue: {
@@ -48,7 +48,7 @@ window.WEDDING_DATA = {
       name: "Mehendi",
       day: "Day 1",
       glyph: "❁",
-      date: "Day 1",
+      date: "8 Dec 2026",
       time: "12:30 PM – 4:00 PM (with lunch)",
       venue: "Garden Area",
       dressCode: "Colourful Indo Western",
@@ -59,7 +59,7 @@ window.WEDDING_DATA = {
       name: "Engagement",
       day: "Day 1",
       glyph: "💍",
-      date: "Day 1",
+      date: "8 Dec 2026",
       time: "4:30 PM – 5:30 PM (with high tea)",
       venue: "Garden Area",
       dressCode: "Pastel Indo Western",
@@ -70,7 +70,7 @@ window.WEDDING_DATA = {
       name: "Sangeet",
       day: "Day 1",
       glyph: "✧",
-      date: "Day 1",
+      date: "8 Dec 2026",
       time: "7:30 PM onwards (dinner)",
       venue: "Kalinga Hall",
       dressCode: "Bling Indo Western",
@@ -81,7 +81,7 @@ window.WEDDING_DATA = {
       name: "Haldi",
       day: "Day 2",
       glyph: "❋",
-      date: "Day 2",
+      date: "9 Dec 2026",
       time: "10:00 AM – 1:00 PM",
       venue: "Pool Side",
       dressCode: "Shades of Yellow Indo Western",
@@ -92,7 +92,7 @@ window.WEDDING_DATA = {
       name: "Wedding & Reception",
       day: "Day 2",
       glyph: "☀",
-      date: "Day 2",
+      date: "9 Dec 2026",
       time: "6:30 PM onwards",
       venue: "Ground (Varmala) & Kalinga Hall (Wedding)",
       dressCode: "Traditional Indian",
@@ -107,11 +107,11 @@ window.WEDDING_DATA = {
   ],
 
   eventDates: {
-    Mehendi: "2026-11-27T12:30:00+05:30",
-    Engagement: "2026-11-27T16:30:00+05:30",
-    Sangeet: "2026-11-27T19:30:00+05:30",
-    Haldi: "2026-11-28T10:00:00+05:30",
-    "Wedding & Reception": "2026-11-28T18:30:00+05:30",
+    Mehendi: "2026-12-08T12:30:00+05:30",
+    Engagement: "2026-12-08T16:30:00+05:30",
+    Sangeet: "2026-12-08T19:30:00+05:30",
+    Haldi: "2026-12-09T10:00:00+05:30",
+    "Wedding & Reception": "2026-12-09T18:30:00+05:30",
   },
 
   music: {

@@ -33,16 +33,16 @@ var c={
   groom:_wc.groom??"Dr. Sarvesh Kumar Singh",
   tagline:_wc.tagline??"#FromOTTableToWeddingVows",
   hashtag:_wc.hashtag??"#FromOTTableToWeddingVows",
-  dateLabel:_ww.dateLabel??"Puri, Odisha",
-  weddingISO:_ww.weddingISO??"2026-11-28T18:30:00+05:30"
+  dateLabel:_ww.dateLabel??"8 – 9 December 2026",
+  weddingISO:_ww.weddingISO??"2026-12-09T18:30:00+05:30"
 };
 
 var l=_w.events??[
-  {name:"Mehendi",day:"Day 1",glyph:"❁",date:"Day 1",time:"12:30 PM – 4:00 PM (with lunch)",venue:"Garden Area",dressCode:"Colourful Indo Western",note:"Henna, melody & delightful lunch in the garden.",caricature:"./editable/assets/caricature-mehendi.jpg"},
-  {name:"Engagement",day:"Day 1",glyph:"💍",date:"Day 1",time:"4:30 PM – 5:30 PM (with high tea)",venue:"Garden Area",dressCode:"Pastel Indo Western",note:"Two rings, two hearts & sunset high tea.",caricature:"./editable/assets/caricature-engagement.jpg"},
-  {name:"Sangeet",day:"Day 1",glyph:"✧",date:"Day 1",time:"7:30 PM onwards (dinner)",venue:"Kalinga Hall",dressCode:"Bling Indo Western",note:"A night of dance, music & celebratory dinner.",caricature:"./editable/assets/caricature-sangeet.jpg"},
-  {name:"Haldi",day:"Day 2",glyph:"❋",date:"Day 2",time:"10:00 AM – 1:00 PM",venue:"Pool Side",dressCode:"Shades of Yellow Indo Western",note:"Sunshine, turmeric laughter & poolside splashes.",caricature:"./editable/assets/caricature-haldi.jpg"},
-  {name:"Wedding & Reception",day:"Day 2",glyph:"☀",date:"Day 2",time:"6:30 PM onwards",venue:"Ground (Varmala) & Kalinga Hall (Wedding)",dressCode:"Traditional Indian",note:"Varmala at 8:00 PM (Ground) · Wedding at 10:30 PM (Kalinga Hall).",caricature:"./editable/assets/caricature-wedding.jpg"}
+  {name:"Mehendi",day:"Day 1 (8 Dec)",glyph:"❁",date:"8 Dec 2026",time:"12:30 PM – 4:00 PM (with lunch)",venue:"Garden Area",dressCode:"Colourful Indo Western",note:"Henna, melody & delightful lunch in the garden.",caricature:"./editable/assets/caricature-mehendi.jpg"},
+  {name:"Engagement",day:"Day 1 (8 Dec)",glyph:"💍",date:"8 Dec 2026",time:"4:30 PM – 5:30 PM (with high tea)",venue:"Garden Area",dressCode:"Pastel Indo Western",note:"Two rings, two hearts & sunset high tea.",caricature:"./editable/assets/caricature-engagement.jpg"},
+  {name:"Sangeet",day:"Day 1 (8 Dec)",glyph:"✧",date:"8 Dec 2026",time:"7:30 PM onwards (dinner)",venue:"Kalinga Hall",dressCode:"Bling Indo Western",note:"A night of dance, music & celebratory dinner.",caricature:"./editable/assets/caricature-sangeet.jpg"},
+  {name:"Haldi",day:"Day 2 (9 Dec)",glyph:"❋",date:"9 Dec 2026",time:"10:00 AM – 1:00 PM",venue:"Pool Side",dressCode:"Shades of Yellow Indo Western",note:"Sunshine, turmeric laughter & poolside splashes.",caricature:"./editable/assets/caricature-haldi.jpg"},
+  {name:"Wedding & Reception",day:"Day 2 (9 Dec)",glyph:"☀",date:"9 Dec 2026",time:"6:30 PM onwards",venue:"Ground (Varmala) & Kalinga Hall (Wedding)",dressCode:"Traditional Indian",note:"Varmala at 8:00 PM (Ground) · Wedding at 10:30 PM (Kalinga Hall).",caricature:"./editable/assets/caricature-wedding.jpg"}
 ];
 
 var u={
@@ -133,7 +133,7 @@ function _(){
     (0,i.jsx)("img",{src:h,alt:"","aria-hidden":"true",width:1024,height:1024,className:"pointer-events-none absolute -left-10 top-6 w-36 opacity-70 animate-float-soft",style:{transform:`translate3d(0, ${e*.5}px, 0)`}}),
     (0,i.jsx)("img",{src:h,alt:"","aria-hidden":"true",width:1024,height:1024,className:"pointer-events-none absolute -right-12 top-24 w-32 -scale-x-100 opacity-60 animate-float-soft",style:{animationDelay:"1.4s",transform:`translate3d(0, ${e*.35}px, 0)`}}),
     (0,i.jsx)("img",{src:g,alt:"Dr. Pallavi and Dr. Sarvesh walking hand in hand",width:1024,height:1536,className:"pointer-events-none absolute bottom-[27%] left-1/2 w-[68%] max-w-[310px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]",style:{transform:`translate3d(-50%, ${-t*.6}px, 0)`}}),
-    (0,i.jsxs)("div",{className:"relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-12 text-center",style:{transform:`translate3d(0, ${-t}px, 0)`},children:[
+    (0,i.jsxs)(`div`,{className:"relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-12 text-center",style:{transform:`translate3d(0, ${-t}px, 0)`},children:[
       (0,i.jsx)("img",{src:ganeshIcon,alt:"Lord Ganesha",width:160,height:160,className:"mx-auto mb-2 h-16 w-16 object-contain ganesh-glow animate-bloom"}),
       (0,i.jsx)("p",{className:"text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-primary/95 animate-ink",style:{animationDelay:"0.3s"},children:"॥ श्री गणेशाय नमः ॥"}),
       (0,i.jsx)("p",{className:"mt-2 script text-lg text-primary animate-ink",style:{animationDelay:"0.45s"},children:"Together with our families"}),
@@ -143,8 +143,8 @@ function _(){
         c.groom
       ]}),
       (0,i.jsx)("p",{className:"mt-4 script text-xl text-primary font-medium tracking-wide animate-ink",style:{animationDelay:"0.9s"},children:c.hashtag}),
-      (0,i.jsx)("p",{className:"mt-2 text-[0.68rem] uppercase tracking-airy text-muted-foreground animate-ink",style:{animationDelay:"1.1s"},children:u.name}),
-      (0,i.jsx)("p",{className:"mt-1 text-[0.62rem] uppercase tracking-airy text-muted-foreground animate-ink",style:{animationDelay:"1.25s"},children:"Puri · Odisha"})
+      (0,i.jsx)("p",{className:"mt-2 text-[0.68rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium",style:{animationDelay:"1.1s"},children:c.dateLabel}),
+      (0,i.jsx)("p",{className:"mt-1 text-[0.62rem] uppercase tracking-airy text-muted-foreground animate-ink",style:{animationDelay:"1.25s"},children:`${u.name} · Puri, Odisha`})
     ]})
   ]})})
 }
@@ -185,9 +185,9 @@ function x({children:e,delay:t=0,className:n=""}){
 
 function S({label:e}){
   return(0,i.jsxs)("div",{className:"flex items-center justify-center gap-3 py-6 text-primary/70",children:[
-    (0,i.jsx)("span",{className:"h-px w-14 bg-gradient-to-r from-transparent to-primary/50"}),
-    (0,i.jsx)("span",{className:"text-[0.7rem] tracking-airy",children:e??"❖"}),
-    (0,i.jsx)("span",{className:"h-px w-14 bg-gradient-to-l from-transparent to-primary/50"})
+    (0,i.jsx)(\"span\",{className:\"h-px w-14 bg-gradient-to-r from-transparent to-primary/50\"}),
+    (0,i.jsx)(\"span\",{className:\"text-[0.7rem] tracking-airy\",children:e??\"❖\"}),
+    (0,i.jsx)(\"span\",{className:\"h-px w-14 bg-gradient-to-l from-transparent to-primary/50\"})
   ]})
 }
 
@@ -247,7 +247,7 @@ function CaricaturesSection(){
           (0,i.jsx)("span",{className:"badge-day",children:e.day})
         ]}),
         (0,i.jsxs)("div",{className:"mt-3 text-xs space-y-1 text-foreground/80",children:[
-          (0,i.jsxs)("p",{className:"flex items-center gap-1.5 font-medium",children:[(0,i.jsx)("span",{className:"text-primary",children:"⏰"}),e.time]}),
+          (0,i.jsxs)("p",{className:"flex items-center gap-1.5 font-medium",children:[(0,i.jsx)("span",{className:"text-primary",children:"📅"}),`${e.date} · ${e.time}`]}),
           (0,i.jsxs)("p",{className:"flex items-center gap-1.5",children:[(0,i.jsx)("span",{className:"text-primary",children:"📍"}),e.venue]})
         ]}),
         (0,i.jsx)("div",{className:"mt-3 pt-2.5 border-t border-primary/10 flex flex-wrap items-center justify-between gap-2",children:(0,i.jsxs)("span",{className:"badge-dress",children:[(0,i.jsx)("span",{children:"✨"}),`Dress Code: ${e.dressCode}`]})}),
@@ -307,8 +307,8 @@ function j(){
       (0,i.jsx)("p",{className:"mt-2 script text-xl text-primary font-medium tracking-wide",children:c.hashtag}),
       (0,i.jsxs)("div",{className:"mt-7 grid w-full max-w-sm grid-cols-2 border-y border-primary/25 py-4 text-left",children:[
         (0,i.jsxs)("div",{className:"border-r border-primary/25 pr-5",children:[
-          (0,i.jsx)("p",{className:"text-xs text-muted-foreground",children:"Celebration"}),
-          (0,i.jsx)("p",{className:"mt-1 font-display text-lg",children:"Wedding & Vows"})
+          (0,i.jsx)("p",{className:"text-xs text-muted-foreground",children:"The Wedding"}),
+          (0,i.jsx)("p",{className:"mt-1 font-display text-lg",children:"9 December 2026"})
         ]}),
         (0,i.jsxs)("div",{className:"pl-5",children:[
           (0,i.jsx)("p",{className:"text-xs text-muted-foreground",children:"The Place"}),
