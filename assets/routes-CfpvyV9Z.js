@@ -130,19 +130,21 @@ function _(){
       (0,i.jsx)("img",{src:m,alt:"Watercolor beach wedding arch at sunset",width:1024,height:1536,className:"h-full w-full object-cover object-top animate-bloom"}),
       (0,i.jsx)("div",{className:"absolute inset-0",style:{background:"var(--gradient-veil)"}})
     ]}),
-    (0,i.jsx)("img",{src:h,alt:"","aria-hidden":"true",width:1024,height:1024,className:"pointer-events-none absolute -left-10 top-6 w-36 opacity-70 animate-float-soft",style:{transform:`translate3d(0, ${e*.5}px, 0)`}}),
+    (0,i.jsxs)("div",{className:"absolute top-5 inset-x-0 z-20 flex flex-col items-center justify-center text-center pointer-events-none px-4",children:[
+      (0,i.jsx)("img",{src:ganeshIcon,alt:"Lord Ganesha",width:140,height:140,className:"mx-auto h-14 w-14 object-contain ganesh-glow drop-shadow-md animate-bloom"}),
+      (0,i.jsx)("p",{className:"mt-1 text-[0.66rem] font-semibold uppercase tracking-[0.24em] text-primary drop-shadow-sm animate-ink",style:{animationDelay:"0.3s"},children:"॥ श्री गणेशाय नमः ॥"})
+    ]}),
+    (0,i.jsx)("img",{src:h,alt:"","aria-hidden":"true",width:1024,height:1024,className:"pointer-events-none absolute -left-10 top-12 w-36 opacity-70 animate-float-soft",style:{transform:`translate3d(0, ${e*.5}px, 0)`}}),
     (0,i.jsx)("img",{src:h,alt:"","aria-hidden":"true",width:1024,height:1024,className:"pointer-events-none absolute -right-12 top-24 w-32 -scale-x-100 opacity-60 animate-float-soft",style:{animationDelay:"1.4s",transform:`translate3d(0, ${e*.35}px, 0)`}}),
-    (0,i.jsx)("img",{src:g,alt:"Dr. Pallavi and Dr. Sarvesh walking hand in hand",width:1024,height:1536,className:"pointer-events-none absolute bottom-[27%] left-1/2 w-[68%] max-w-[310px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]",style:{transform:`translate3d(-50%, ${-t*.6}px, 0)`}}),
-    (0,i.jsxs)(`div`,{className:"relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-12 text-center",style:{transform:`translate3d(0, ${-t}px, 0)`},children:[
-      (0,i.jsx)("img",{src:ganeshIcon,alt:"Lord Ganesha",width:160,height:160,className:"mx-auto mb-2 h-16 w-16 object-contain ganesh-glow animate-bloom"}),
-      (0,i.jsx)("p",{className:"text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-primary/95 animate-ink",style:{animationDelay:"0.3s"},children:"॥ श्री गणेशाय नमः ॥"}),
-      (0,i.jsx)("p",{className:"mt-2 script text-lg text-primary animate-ink",style:{animationDelay:"0.45s"},children:"Together with our families"}),
+    (0,i.jsx)("img",{src:g,alt:"Dr. Pallavi and Dr. Sarvesh walking hand in hand",width:1024,height:1536,className:"pointer-events-none absolute bottom-[30%] left-1/2 w-[65%] max-w-[285px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]",style:{transform:`translate3d(-50%, ${-t*.6}px, 0)`}}),
+    (0,i.jsxs)(`div`,{className:"relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-10 text-center",style:{transform:`translate3d(0, ${-t}px, 0)`},children:[
+      (0,i.jsx)("p",{className:"script text-lg text-primary animate-ink",style:{animationDelay:"0.45s"},children:"Together with our families"}),
       (0,i.jsxs)("h1",{className:"mt-2 font-display text-[2.5rem] sm:text-[3.15rem] leading-[1.04] text-foreground animate-ink",style:{animationDelay:"0.7s"},children:[
         c.bride,
         (0,i.jsx)("span",{className:"script mx-2 block text-2xl text-primary",children:"&"}),
         c.groom
       ]}),
-      (0,i.jsx)("p",{className:"mt-4 script text-xl text-primary font-medium tracking-wide animate-ink",style:{animationDelay:"0.9s"},children:c.hashtag}),
+      (0,i.jsx)("p",{className:"mt-3 script text-xl text-primary font-medium tracking-wide animate-ink",style:{animationDelay:"0.9s"},children:c.hashtag}),
       (0,i.jsx)("p",{className:"mt-2 text-[0.68rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium",style:{animationDelay:"1.1s"},children:c.dateLabel}),
       (0,i.jsx)("p",{className:"mt-1 text-[0.62rem] uppercase tracking-airy text-muted-foreground animate-ink",style:{animationDelay:"1.25s"},children:`${u.name} · Puri, Odisha`})
     ]})
