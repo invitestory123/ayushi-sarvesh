@@ -47,3 +47,33 @@
   15% { opacity: 0.95; transform: translate3d(calc(var(--drift, 20px) * 0.2), 35px, 0) rotate(45deg) scale(1); }
   100% { transform: translate3d(var(--drift, 40px), 360px, 0) rotate(380deg) scale(0.85); opacity: 0; }
 }
+
+.hero-couple {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(265px, 32svh, 320px);
+  width: 50%;
+  max-width: 220px;
+  max-height: 40svh;
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@media (min-width: 640px) {
+  .hero-couple {
+    bottom: clamp(270px, 33svh, 340px);
+    width: 44%;
+    max-width: 240px;
+    max-height: 44svh;
+  }
+}
+
+@media (max-height: 720px) {
+  .hero-couple {
+    bottom: clamp(255px, 34svh, 280px);
+    width: 46%;
+    max-width: 195px;
+    max-height: 36svh;
+  }
+}
