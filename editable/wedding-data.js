@@ -37,7 +37,8 @@ window.WEDDING_DATA = {
   },
 
   venue: {
-    name: "Empires Beachfront, Puri",
+    name: "Empires Beachfront",
+    fullName: "Empires Beachfront, Puri",
     address: "New Marine Drive Road, Sipasarubali, Baliapanda, Puri, Odisha 752001",
     mapsUrl: "https://share.google/67zNSpffo3mrQLxCX",
     searchMapsUrl: "https://www.google.com/maps/search/?api=1&query=Empires+Beachfront,+Puri",
@@ -94,14 +95,14 @@ window.WEDDING_DATA = {
       glyph: "☀",
       date: "9 Dec 2026",
       time: "6:30 PM onwards",
-      venue: "Ground (Varmala) & Kalinga Hall (Wedding)",
+      venue: "Garden Area (Varmala & wedding)",
       dressCode: "Traditional Indian",
       subEvents: [
         { label: "Celebration begins", time: "6:30 PM onwards", venue: "Empires Beachfront" },
-        { label: "Varmala", time: "8:00 PM", venue: "Ground" },
-        { label: "Wedding Ceremony", time: "10:30 PM", venue: "Kalinga Hall" },
+        { label: "Varmala", time: "8:00 PM", venue: "Garden Area" },
+        { label: "Wedding Ceremony", time: "10:30 PM", venue: "Garden Area" },
       ],
-      note: "Varmala at 8:00 PM (Ground) · Wedding at 10:30 PM (Kalinga Hall).",
+      note: "Varmala at 8pm and wedding at 10:30",
       caricature: "./editable/assets/caricature-wedding.jpg",
     },
   ],
