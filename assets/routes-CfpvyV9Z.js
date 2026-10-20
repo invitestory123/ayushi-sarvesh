@@ -42,11 +42,11 @@ var l=_w.events??[
   {name:"Engagement",day:"Day 1 (8 Dec)",glyph:"💍",date:"8 Dec 2026",time:"4:30 PM – 5:30 PM (with high tea)",venue:"Garden Area",dressCode:"Pastel Indo Western",note:"Two rings, two hearts & sunset high tea.",caricature:"./editable/assets/caricature-engagement.jpg"},
   {name:"Sangeet",day:"Day 1 (8 Dec)",glyph:"✧",date:"8 Dec 2026",time:"7:30 PM onwards (dinner)",venue:"Kalinga Hall",dressCode:"Bling Indo Western",note:"A night of dance, music & celebratory dinner.",caricature:"./editable/assets/caricature-sangeet.jpg"},
   {name:"Haldi",day:"Day 2 (9 Dec)",glyph:"❋",date:"9 Dec 2026",time:"10:00 AM – 1:00 PM",venue:"Pool Side",dressCode:"Shades of Yellow Indo Western",note:"Sunshine, turmeric laughter & poolside splashes.",caricature:"./editable/assets/caricature-haldi.jpg"},
-  {name:"Wedding & Reception",day:"Day 2 (9 Dec)",glyph:"☀",date:"9 Dec 2026",time:"6:30 PM onwards",venue:"Ground (Varmala) & Kalinga Hall (Wedding)",dressCode:"Traditional Indian",note:"Varmala at 8:00 PM (Ground) · Wedding at 10:30 PM (Kalinga Hall).",caricature:"./editable/assets/caricature-wedding.jpg"}
+  {name:"Wedding & Reception",day:"Day 2 (9 Dec)",glyph:"☀",date:"9 Dec 2026",time:"6:30 PM onwards",venue:"Garden Area (Varmala & wedding)",dressCode:"Traditional Indian",note:"Varmala at 8pm and wedding at 10:30",caricature:"./editable/assets/caricature-wedding.jpg"}
 ];
 
 var u={
-  name:_wv.name??"Empires Beachfront, Puri",
+  name:_wv.name??"Empires Beachfront",
   address:_wv.address??"New Marine Drive Road, Sipasarubali, Baliapanda, Puri, Odisha 752001",
   mapsUrl:_wv.mapsUrl??"https://share.google/67zNSpffo3mrQLxCX",
   searchMapsUrl:_wv.searchMapsUrl??"https://www.google.com/maps/search/?api=1&query=Empires+Beachfront,+Puri"
@@ -138,15 +138,14 @@ function _(){
     (0,i.jsx)("img",{src:h,alt:"","aria-hidden":"true",width:1024,height:1024,className:"pointer-events-none absolute -right-12 top-24 w-32 -scale-x-100 opacity-60 animate-float-soft",style:{animationDelay:"1.4s",transform:`translate3d(0, ${e*.35}px, 0)`}}),
     (0,i.jsx)("img",{src:g,alt:"Dr. Pallavi and Dr. Sarvesh walking hand in hand",width:1024,height:1536,className:"pointer-events-none absolute bottom-[30%] left-1/2 w-[65%] max-w-[285px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]",style:{transform:`translate3d(-50%, ${-t*.6}px, 0)`}}),
     (0,i.jsxs)(`div`,{className:"relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-10 text-center",style:{transform:`translate3d(0, ${-t}px, 0)`},children:[
-      (0,i.jsx)("p",{className:"script text-lg text-primary animate-ink",style:{animationDelay:"0.45s"},children:"Together with our families"}),
-      (0,i.jsxs)("h1",{className:"mt-2 font-display text-[2.5rem] sm:text-[3.15rem] leading-[1.04] text-foreground animate-ink",style:{animationDelay:"0.7s"},children:[
+      (0,i.jsx)("p",{className:"script text-xl sm:text-2xl text-primary font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.45s"},children:"Together with our families"}),
+      (0,i.jsxs)("h1",{className:"mt-2 font-display text-[2.5rem] sm:text-[3.25rem] leading-[1.04] text-foreground font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.7s"},children:[
         c.bride,
-        (0,i.jsx)("span",{className:"script mx-2 block text-2xl text-primary",children:"&"}),
+        (0,i.jsx)("span",{className:"script mx-2 block text-2xl text-primary font-normal",children:"&"}),
         c.groom
       ]}),
-      (0,i.jsx)("p",{className:"mt-3 script text-xl text-primary font-medium tracking-wide animate-ink",style:{animationDelay:"0.9s"},children:c.hashtag}),
-      (0,i.jsx)("p",{className:"mt-2 text-[0.68rem] uppercase tracking-airy text-muted-foreground animate-ink font-medium",style:{animationDelay:"1.1s"},children:c.dateLabel}),
-      (0,i.jsx)("p",{className:"mt-1 text-[0.62rem] uppercase tracking-airy text-muted-foreground animate-ink",style:{animationDelay:"1.25s"},children:`${u.name} · Puri, Odisha`})
+      (0,i.jsx)("p",{className:"mt-3 text-[0.82rem] sm:text-[0.9rem] uppercase tracking-[0.26em] text-foreground font-semibold animate-ink drop-shadow-xs",style:{animationDelay:"0.9s"},children:c.dateLabel}),
+      (0,i.jsx)("p",{className:"mt-1.5 text-[0.8rem] sm:text-[0.88rem] uppercase tracking-[0.22em] text-foreground/90 font-semibold animate-ink drop-shadow-xs",style:{animationDelay:"1.1s"},children:`${u.name.replace(/,\s*Puri/i, "")} · Puri, Odisha`})
     ]})
   ]})})
 }
@@ -279,7 +278,7 @@ function E(){
       (0,i.jsx)("img",{src:w,alt:"Watercolor paper lantern glowing warmly",loading:"lazy",width:1024,height:1536,className:"lantern-breathe mx-auto w-28 object-contain"}),
       (0,i.jsx)("h2",{className:"mt-2 font-display text-[2.35rem] leading-tight",children:"Send them a wish"}),
       (0,i.jsx)("p",{className:"mx-auto mt-3 max-w-xs text-sm leading-relaxed text-muted-foreground",children:"Release a sky full of light for their new beginning."}),
-      (0,i.jsx)("button",{type:"button",onClick:s,className:"press mt-7 flex min-h-[50px] w-full items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] uppercase tracking-[0.22em] text-primary-foreground shadow-[0_14px_30px_-18px_rgba(112,82,42,0.75)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",children:"Release lanterns"}),
+      (0,i.jsx)("button",{type:"button",onClick:s,className:"press mt-7 flex min-h-[50px] w-full items-center justify-center rounded-sm bg-primary px-5 text-[0.68rem] uppercase tracking-[0.22em] text-primary-foreground shadow-[0_14px_30px_-18px_rgba(112,82,42,0.75)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",children:"Click here to bless them"}),
       (0,i.jsx)("p",{"aria-live":"polite",className:"mt-3 min-h-5 text-xs text-muted-foreground",children:n})
     ]})
   ]})
@@ -295,12 +294,12 @@ function j(){
   async function a(){
     try{await navigator.clipboard.writeText(window.location.href),n("Invitation link copied")}catch{n("Copy the link from your browser")}
   }
-  return(0,i.jsxs)("footer",{className:"footer-scene relative isolate min-h-[38rem] overflow-hidden",children:[
+  return(0,i.jsxs)("footer",{className:"footer-scene relative isolate min-h-[30rem] overflow-hidden",children:[
     (0,i.jsx)("img",{src:D,alt:"","aria-hidden":"true",loading:"lazy",width:1024,height:1280,className:"absolute inset-0 -z-30 h-full w-full object-cover",style:{transform:`translate3d(0, ${-e*.32}px, 0) scale(1.12)`}}),
     (0,i.jsx)("div",{className:"absolute inset-0 -z-20 bg-[linear-gradient(180deg,var(--color-background)_0%,transparent_24%,color-mix(in_oklab,var(--color-background)_38%,transparent)_100%)]"}),
     (0,i.jsx)("img",{src:A,alt:"","aria-hidden":"true",loading:"lazy",width:1024,height:1536,className:"pointer-events-none absolute -right-24 -top-32 -z-10 h-[110%] w-auto opacity-40"}),
     (0,i.jsx)("img",{src:k,alt:"","aria-hidden":"true",loading:"lazy",width:1024,height:1536,className:"lantern-breathe pointer-events-none absolute -left-10 top-24 -z-10 w-28 opacity-70"}),
-    (0,i.jsxs)("div",{className:"mx-auto flex min-h-[38rem] max-w-lg flex-col items-center justify-end px-7 pb-10 pt-32 text-center",children:[
+    (0,i.jsxs)("div",{className:"mx-auto flex max-w-lg flex-col items-center justify-start px-7 pt-12 pb-14 text-center",children:[
       (0,i.jsx)("img",{src:O,alt:"","aria-hidden":"true",loading:"lazy",width:1024,height:1024,className:"w-24 opacity-75"}),
       (0,i.jsx)("p",{className:"mt-4 script text-lg text-primary",children:"We cannot wait to celebrate with you"}),
       (0,i.jsxs)("h2",{className:"mt-4 font-display text-[2.35rem] sm:text-[2.65rem] leading-[1.05]",children:[
