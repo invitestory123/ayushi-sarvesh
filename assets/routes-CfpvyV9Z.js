@@ -1,18 +1,100 @@
 import{n as e,r as t,t as n}from"./index-B9M5EMSq.js";var r=t(e(),1),i=n();
-function a({children:e}){
-  let[t,n]=(0,r.useState)([]),a=(0,r.useRef)(0),o=(0,r.useCallback)((e,t,r)=>{
-    let i=r.getBoundingClientRect(),o=e-i.left,s=t-i.top,
-    c=Array.from({length:7},()=>({id:a.current++,x:o+(Math.random()-.5)*40,y:s+(Math.random()-.5)*24,drift:(Math.random()-.5)*120,hue:Math.random()}));
-    n(e=>[...e.slice(-40),...c]),
-    setTimeout(()=>{let e=new Set(c.map(e=>e.id));n(t=>t.filter(t=>!e.has(t.id)))},2600)
+function ConfettiCanvas(){
+  let cRef=(0,r.useRef)(null);
+  (0,r.useEffect)(()=>{
+    let c=cRef.current;if(!c)return;
+    let ctx=c.getContext("2d");if(!ctx)return;
+    let animId,w=0,h=0,dpr=1,particles=[];
+    let palette=["#D4AF37","#F3E5AB","#C5A059","#FFD700","#F4B6B6","#E8998D","#F8D7DA","#FFF8EE","#F5E6CC"];
+    function resize(){
+      dpr=Math.min(window.devicePixelRatio||1,2);
+      let p=c.parentElement;
+      w=p?p.offsetWidth:window.innerWidth;
+      h=p?p.offsetHeight:window.innerHeight;
+      c.width=w*dpr;c.height=h*dpr;
+      c.style.width=w+"px";c.style.height=h+"px";
+      ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    resize();
+    window.addEventListener("resize",resize);
+    function spawn(x,y,burst){
+      let size=burst?(5+Math.random()*6):(4+Math.random()*5);
+      return{
+        x:x??Math.random()*w,
+        y:y??(-15-Math.random()*40),
+        size,
+        color:palette[Math.floor(Math.random()*palette.length)],
+        isPetal:Math.random()>.4,
+        vx:(Math.random()-.5)*(burst?4.5:1.1),
+        vy:burst?(-2.5-Math.random()*3.5):(1.1+Math.random()*1.5),
+        gravity:.032+Math.random()*.028,
+        tilt:Math.random()*Math.PI,
+        tiltSpeed:.025+Math.random()*.04,
+        wobble:Math.random()*Math.PI*2,
+        wobbleSpeed:.02+Math.random()*.035,
+        opacity:.85+Math.random()*.15,
+        rot:Math.random()*Math.PI*2,
+        rotSpeed:(Math.random()-.5)*.04
+      };
+    }
+    for(let i=0;i<30;i++){let p=spawn();p.y=Math.random()*h;particles.push(p)}
+    let lastT=0;
+    function tick(time){
+      ctx.clearRect(0,0,w,h);
+      if(particles.length<48&&time-lastT>200){
+        particles.push(spawn());
+        lastT=time;
+      }
+      for(let i=particles.length-1;i>=0;i--){
+        let p=particles[i];
+        p.vy+=p.gravity;
+        p.x+=p.vx+Math.sin(p.wobble)*.75;
+        p.y+=p.vy;
+        p.wobble+=p.wobbleSpeed;
+        p.tilt+=p.tiltSpeed;
+        p.rot+=p.rotSpeed;
+        let cosT=Math.cos(p.tilt);
+        let curH=p.size*Math.abs(cosT);
+        ctx.save();
+        ctx.translate(p.x,p.y);
+        ctx.rotate(p.rot);
+        ctx.globalAlpha=p.opacity;
+        ctx.fillStyle=p.color;
+        if(p.isPetal){
+          ctx.beginPath();
+          ctx.ellipse(0,0,p.size*.7,curH*.9,Math.PI/4,0,Math.PI*2);
+          ctx.fill();
+        }else{
+          ctx.fillRect(-p.size/2,-curH/2,p.size,curH);
+        }
+        ctx.restore();
+        if(p.y>h+25||p.x<-35||p.x>w+35){
+          particles.splice(i,1);
+        }
+      }
+      animId=requestAnimationFrame(tick);
+    }
+    animId=requestAnimationFrame(tick);
+    function onPointer(e){
+      let r=c.getBoundingClientRect();
+      let px=e.clientX-r.left,py=e.clientY-r.top;
+      for(let i=0;i<14;i++)particles.push(spawn(px,py,!0));
+    }
+    let p=c.parentElement;
+    if(p)p.addEventListener("pointerdown",onPointer);
+    return()=>{
+      cancelAnimationFrame(animId);
+      window.removeEventListener("resize",resize);
+      if(p)p.removeEventListener("pointerdown",onPointer);
+    };
   },[]);
-  return(0,i.jsxs)("div",{className:"relative",onPointerDown:e=>o(e.clientX,e.clientY,e.currentTarget),children:[
+  return (0,i.jsx)("canvas",{ref:cRef,className:"pointer-events-none absolute inset-0 z-30 h-full w-full","aria-hidden":"true"});
+}
+function a({children:e}){
+  return(0,i.jsxs)("div",{className:"relative",children:[
     e,
-    (0,i.jsx)("div",{className:"pointer-events-none absolute inset-0 overflow-hidden",children:t.map(e=>(0,i.jsx)("span",{
-      className:"absolute block h-2.5 w-3.5",
-      style:{left:e.x,top:e.y,"--drift":`${e.drift}px`,background:e.hue>.5?"color-mix(in oklab, var(--color-primary) 45%, white)":"color-mix(in oklab, var(--color-sage) 55%, white)",borderRadius:"70% 30% 65% 35% / 60% 60% 40% 40%",animation:`petal-fall ${1.9+e.hue}s cubic-bezier(.3,.6,.4,1) forwards`,willChange:"transform, opacity"}
-    },e.id))})
-  ]})
+    (0,i.jsx)(ConfettiCanvas,{})
+  ]});
 }
 
 function o(e=.15){
@@ -138,7 +220,8 @@ function _(){
     (0,i.jsx)("img",{src:h,alt:"","aria-hidden":"true",width:1024,height:1024,className:"pointer-events-none absolute -right-12 top-24 w-32 -scale-x-100 opacity-60 animate-float-soft",style:{animationDelay:"1.4s",transform:`translate3d(0, ${e*.35}px, 0)`}}),
     (0,i.jsx)("img",{src:g,alt:"Dr. Pallavi and Dr. Sarvesh walking hand in hand",width:1024,height:1536,className:"pointer-events-none absolute bottom-[30%] left-1/2 w-[65%] max-w-[285px] -translate-x-1/2 object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]",style:{transform:`translate3d(-50%, ${-t*.6}px, 0)`}}),
     (0,i.jsxs)(`div`,{className:"relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-10 text-center",style:{transform:`translate3d(0, ${-t}px, 0)`},children:[
-      (0,i.jsx)("p",{className:"script text-xl sm:text-2xl text-primary font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.45s"},children:"Together with our families"}),
+      (0,i.jsx)("p",{className:"script text-xl sm:text-2xl text-primary font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.45s"},children:_wc.invitationPreamble??"Together with our families,"}),
+      (0,i.jsx)("p",{className:"mt-1 max-w-xs text-xs sm:text-sm text-foreground/85 font-medium leading-relaxed tracking-wide animate-ink drop-shadow-xs",style:{animationDelay:"0.55s"},children:_wc.invitationSubtitle??"We invite you to bless our union and celebrate our wedding"}),
       (0,i.jsxs)("h1",{className:"mt-2 font-display text-[2.5rem] sm:text-[3.25rem] leading-[1.04] text-foreground font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.7s"},children:[
         c.bride,
         (0,i.jsx)("span",{className:"script mx-2 block text-2xl text-primary font-normal",children:"&"}),

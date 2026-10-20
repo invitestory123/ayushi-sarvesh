@@ -10,6 +10,8 @@ window.WEDDING_DATA = {
     tagline: "#FromOTTableToWeddingVows",
     hashtag: "#FromOTTableToWeddingVows",
     displayNames: "Dr. Pallavi & Dr. Sarvesh",
+    invitationPreamble: "Together with our families,",
+    invitationSubtitle: "We invite you to bless our union and celebrate our wedding",
   },
 
   family: {
