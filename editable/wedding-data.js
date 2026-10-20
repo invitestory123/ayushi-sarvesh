@@ -11,7 +11,12 @@ window.WEDDING_DATA = {
     hashtag: "#FromOTTableToWeddingVows",
     displayNames: "Dr. Pallavi & Dr. Sarvesh",
     invitationPreamble: "Together with our families,",
-    invitationSubtitle: "We invite you to bless our union and celebrate our wedding",
+    invitationSubtitle: "We invite you to bless us and celebrate our wedding",
+  },
+
+  footer: {
+    parents: "Dr BK Purohit & Dr Sujata Hota",
+    withLove: "With love from Purohit family",
   },
 
   family: {

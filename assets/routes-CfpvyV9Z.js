@@ -108,7 +108,7 @@ function o(e=.15){
 
 function s(e=.35){return 0}
 
-var _w=window.WEDDING_DATA||{},_wc=_w.couple||{},_ww=_w.wedding||{},_wv=_w.venue||{},_wi=_w.images||{},_we=_w.eventDates||{},_wf=_w.family||{},_wm=_w.music||{};
+var _w=window.WEDDING_DATA||{},_wc=_w.couple||{},_ww=_w.wedding||{},_wv=_w.venue||{},_wi=_w.images||{},_we=_w.eventDates||{},_wf=_w.family||{},_wm=_w.music||{},_wft=_w.footer||{};
 
 var c={
   bride:_wc.bride??"Dr. Pallavi Purohit",
@@ -221,7 +221,7 @@ function _(){
     (0,i.jsx)("img",{src:g,alt:"Dr. Pallavi and Dr. Sarvesh walking hand in hand",width:1024,height:1536,className:"hero-couple pointer-events-none absolute inset-x-0 mx-auto object-contain animate-bloom drop-shadow-[0_18px_28px_rgba(92,80,68,0.18)]",style:{transform:`translate3d(0, ${-t*.6}px, 0)`}}),
     (0,i.jsxs)(`div`,{className:"relative flex min-h-[100svh] flex-col items-center justify-end px-6 pb-10 text-center",style:{transform:`translate3d(0, ${-t}px, 0)`},children:[
       (0,i.jsx)("p",{className:"script text-xl sm:text-2xl text-primary font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.45s"},children:_wc.invitationPreamble??"Together with our families,"}),
-      (0,i.jsx)("p",{className:"mt-1 max-w-xs text-xs sm:text-sm text-foreground/85 font-medium leading-relaxed tracking-wide animate-ink drop-shadow-xs",style:{animationDelay:"0.55s"},children:_wc.invitationSubtitle??"We invite you to bless our union and celebrate our wedding"}),
+      (0,i.jsx)("p",{className:"mt-1 max-w-xs text-xs sm:text-sm text-foreground/85 font-medium leading-relaxed tracking-wide animate-ink drop-shadow-xs",style:{animationDelay:"0.55s"},children:_wc.invitationSubtitle??"We invite you to bless us and celebrate our wedding"}),
       (0,i.jsxs)("h1",{className:"mt-2 font-display text-[2.5rem] sm:text-[3.25rem] leading-[1.04] text-foreground font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.7s"},children:[
         c.bride,
         (0,i.jsx)("span",{className:"script mx-2 block text-2xl text-primary font-normal",children:"&"}),
@@ -401,7 +401,10 @@ function j(){
       ]}),
       (0,i.jsx)("button",{type:"button",onClick:a,className:"press mt-7 min-h-[48px] rounded-sm border border-primary/45 bg-background/70 px-6 text-[0.66rem] uppercase tracking-[0.2em] text-foreground backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",children:"Copy invitation link"}),
       (0,i.jsx)("p",{"aria-live":"polite",className:"mt-3 min-h-5 text-xs text-muted-foreground",children:t}),
-      (0,i.jsx)("p",{className:"mt-8 text-xs leading-relaxed text-foreground/70",children:"With love, from Purohit & Singh families"}),
+      (0,i.jsxs)("div",{className:"mt-8 text-xs leading-relaxed text-foreground/70",children:[
+        (0,i.jsx)("p",{className:"font-medium text-foreground/85",children:_wft.parents??"Dr BK Purohit & Dr Sujata Hota"}),
+        (0,i.jsx)("p",{className:"mt-1",children:_wft.withLove??"With love from Purohit family"})
+      ]}),
       (0,i.jsx)("a",{href:"https://www.instagram.com/invitestory.in/",target:"_blank",rel:"noreferrer",className:"mt-6 text-[0.55rem] uppercase tracking-[0.18em] text-foreground/40 transition-colors hover:text-primary/70",children:"Follow @invitestory.in on Instagram"})
     ]})
   ]})
