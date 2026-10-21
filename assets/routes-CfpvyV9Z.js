@@ -113,6 +113,8 @@ var _w=window.WEDDING_DATA||{},_wc=_w.couple||{},_ww=_w.wedding||{},_wv=_w.venue
 var c={
   bride:_wc.bride??"Dr. Pallavi Purohit",
   groom:_wc.groom??"Dr. Sarvesh Kumar Singh",
+  shortBride:_wc.shortBride??"Pallavi",
+  shortGroom:_wc.shortGroom??"Sarvesh",
   tagline:_wc.tagline??"#FromOTTableToWeddingVows",
   hashtag:_wc.hashtag??"#FromOTTableToWeddingVows",
   dateLabel:_ww.dateLabel??"8 – 9 December 2026",
@@ -120,11 +122,11 @@ var c={
 };
 
 var l=_w.events??[
-  {name:"Mehendi",day:"Day 1 (8 Dec)",glyph:"❁",date:"8 Dec 2026",time:"12:30 PM – 4:00 PM (with lunch)",venue:"Garden Area",dressCode:"Colourful Indo Western",note:"Henna, melody & delightful lunch in the garden.",caricature:"./editable/assets/caricature-mehendi.jpg"},
-  {name:"Engagement",day:"Day 1 (8 Dec)",glyph:"💍",date:"8 Dec 2026",time:"4:30 PM – 5:30 PM (with high tea)",venue:"Garden Area",dressCode:"Pastel Indo Western",note:"Two rings, two hearts & sunset high tea.",caricature:"./editable/assets/caricature-engagement.jpg"},
-  {name:"Sangeet",day:"Day 1 (8 Dec)",glyph:"✧",date:"8 Dec 2026",time:"7:30 PM onwards (dinner)",venue:"Kalinga Hall",dressCode:"Bling Indo Western",note:"A night of dance, music & celebratory dinner.",caricature:"./editable/assets/caricature-sangeet.jpg"},
-  {name:"Haldi",day:"Day 2 (9 Dec)",glyph:"❋",date:"9 Dec 2026",time:"10:00 AM – 1:00 PM",venue:"Pool Side",dressCode:"Shades of Yellow Indo Western",note:"Sunshine, turmeric laughter & poolside splashes.",caricature:"./editable/assets/caricature-haldi.jpg"},
-  {name:"Wedding & Reception",day:"Day 2 (9 Dec)",glyph:"☀",date:"9 Dec 2026",time:"6:30 PM onwards",venue:"Garden Area (Varmala & wedding)",dressCode:"Traditional Indian",note:"Varmala at 8pm and wedding at 10:30",caricature:"./editable/assets/caricature-wedding.jpg"}
+  {name:"Mehendi",day:"Day 1 (8 Dec)",glyph:"❁",date:"8 Dec 2026",time:"12:30 PM – 4:00 PM (with lunch)",venue:"Garden Area",dressCode:"Colourful Indo Western/Indian",note:"Henna, melody & delightful lunch in the garden.",caricature:"./editable/assets/caricature-mehendi.jpg"},
+  {name:"Engagement",day:"Day 1 (8 Dec)",glyph:"💍",date:"8 Dec 2026",time:"4:30 PM – 5:30 PM (with high tea)",venue:"Garden Area",dressCode:"Pastel Indo Western/Indian",note:"Two rings, two hearts & sunset high tea.",caricature:"./editable/assets/caricature-engagement.jpg"},
+  {name:"Sangeet",day:"Day 1 (8 Dec)",glyph:"✧",date:"8 Dec 2026",time:"7:30 PM onwards (dinner)",venue:"Kalinga Hall",dressCode:"Bling Indo Western/Indian",note:"A night of dance, music & celebratory dinner.",caricature:"./editable/assets/caricature-sangeet.jpg"},
+  {name:"Haldi",day:"Day 2 (9 Dec)",glyph:"❋",date:"9 Dec 2026",time:"10:00 AM – 1:00 PM",venue:"Pool Side",dressCode:"Shades of Yellow Indo Western/Indian",note:"Sunshine, turmeric laughter & poolside splashes.",caricature:"./editable/assets/caricature-haldi.jpg"},
+  {name:"Wedding & Reception",day:"Day 2 (9 Dec)",glyph:"☀",date:"9 Dec 2026",time:"6:30 PM onwards",venue:"Garden Area (Varmala & wedding)",dressCode:"Traditional Indian",note:"Varmala at 8pm and wedding at 10:30 PM",caricature:"./editable/assets/caricature-wedding.jpg"}
 ];
 
 var u={
@@ -137,11 +139,11 @@ var u={
 function d(e){return`${e.toISOString().replace(/[-:]/g,"").slice(0,15)}Z`}
 
 function f(){
-  let e=["BEGIN:VCALENDAR","VERSION:2.0",`PRODID:-//${c.bride} & ${c.groom}//Wedding//EN`],
+  let e=["BEGIN:VCALENDAR","VERSION:2.0",`PRODID:-//${c.shortBride??"Pallavi"} & ${c.shortGroom??"Sarvesh"}//Wedding//EN`],
       t=_we??{};
   for(let n of l){
     let r=new Date(t[n.name]??c.weddingISO),i=new Date(r.getTime()+108e5);
-    e.push("BEGIN:VEVENT",`UID:${n.name.toLowerCase().replace(/[^a-z0-9]/g,"")}-wedding@invitestory`,`DTSTAMP:${d(new Date)}`,`DTSTART:${d(r)}`,`DTEND:${d(i)}`,`SUMMARY:${n.name} | ${c.bride} & ${c.groom}`,`LOCATION:${n.venue}, ${u.name}`,`DESCRIPTION:${n.note} | Dress Code: ${n.dressCode}`,"END:VEVENT")
+    e.push("BEGIN:VEVENT",`UID:${n.name.toLowerCase().replace(/[^a-z0-9]/g,"")}-wedding@invitestory`,`DTSTAMP:${d(new Date)}`,`DTSTART:${d(r)}`,`DTEND:${d(i)}`,`SUMMARY:${n.name} | ${c.shortBride??"Pallavi"} & ${c.shortGroom??"Sarvesh"}`,`LOCATION:${n.venue}, ${u.name}`,`DESCRIPTION:${n.note} | Dress Code: ${n.dressCode}`,"END:VEVENT")
   }
   return e.push("END:VCALENDAR"),e.join("\r\n")
 }
@@ -150,7 +152,7 @@ function p(){
   let e=new Blob([f()],{type:"text/calendar;charset=utf-8"}),
       t=URL.createObjectURL(e),
       n=document.createElement("a");
-  n.href=t,n.download="dr-pallavi-dr-sarvesh-wedding.ics",document.body.appendChild(n),n.click(),n.remove(),setTimeout(()=>URL.revokeObjectURL(t),1e3)
+  n.href=t,n.download="pallavi-sarvesh-wedding.ics",document.body.appendChild(n),n.click(),n.remove(),setTimeout(()=>URL.revokeObjectURL(t),1e3)
 }
 
 function startAudioMusic(){
@@ -223,9 +225,9 @@ function _(){
       (0,i.jsx)("p",{className:"script text-xl sm:text-2xl text-primary font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.45s"},children:_wc.invitationPreamble??"Together with our families,"}),
       (0,i.jsx)("p",{className:"mt-1 max-w-xs text-xs sm:text-sm text-foreground/85 font-medium leading-relaxed tracking-wide animate-ink drop-shadow-xs",style:{animationDelay:"0.55s"},children:_wc.invitationSubtitle??"We invite you to bless us and celebrate our wedding"}),
       (0,i.jsxs)("h1",{className:"mt-2 font-display text-[2.5rem] sm:text-[3.25rem] leading-[1.04] text-foreground font-semibold animate-ink drop-shadow-sm",style:{animationDelay:"0.7s"},children:[
-        c.bride,
+        _wc.heroBride??"Dr. Pallavi",
         (0,i.jsx)("span",{className:"script mx-2 block text-2xl text-primary font-normal",children:"&"}),
-        c.groom
+        _wc.heroGroom??"Dr. Sarvesh"
       ]}),
       (0,i.jsx)("p",{className:"mt-3 text-[0.82rem] sm:text-[0.9rem] uppercase tracking-[0.26em] text-foreground font-semibold animate-ink drop-shadow-xs",style:{animationDelay:"0.9s"},children:c.dateLabel}),
       (0,i.jsx)("p",{className:"mt-1.5 text-[0.8rem] sm:text-[0.88rem] uppercase tracking-[0.22em] text-foreground/90 font-semibold animate-ink drop-shadow-xs",style:{animationDelay:"1.1s"},children:`${u.name.replace(/,\s*Puri/i, "")} · Puri, Odisha`})
@@ -317,9 +319,7 @@ function CoupleIntroSection(){
 
 /* Caricature Event Pictures in place of love story pictures */
 function CaricaturesSection(){
-  return(0,i.jsxs)("section",{className:"relative px-6 pb-16",children:[
-    (0,i.jsx)(x,{children:(0,i.jsx)(C,{overline:"Visual Celebrations",title:"Caricature Event Stories"})}),
-    (0,i.jsx)(x,{delay:40,children:(0,i.jsx)("p",{className:"mx-auto -mt-2 max-w-sm text-center text-xs leading-relaxed text-muted-foreground mb-8",children:"A picturesque caricature gallery capturing every cherished ritual, joyful rhythm, and dress inspiration."})}),
+  return(0,i.jsx)("section",{className:"relative px-6 pb-16",children:
     (0,i.jsx)("div",{className:"space-y-8",children:l.map((e,t)=>(0,i.jsx)(x,{delay:t*80,children:(0,i.jsxs)("article",{className:"card-soft caricature-gallery-card overflow-hidden rounded-lg border border-primary/20 shadow-sm",children:[
       (0,i.jsx)("div",{className:"relative aspect-[4/3] w-full overflow-hidden bg-muted",children:(0,i.jsx)("img",{src:e.caricature,alt:`${e.name} caricature illustration`,loading:"lazy",width:800,height:600,className:"h-full w-full object-cover transition-transform duration-500 hover:scale-105"})}),
       (0,i.jsxs)("div",{className:"p-5",children:[
@@ -338,7 +338,7 @@ function CaricaturesSection(){
         (0,i.jsx)("p",{className:"mt-2.5 text-xs italic text-muted-foreground",children:e.note})
       ]})
     ]})},e.name))})
-  ]})
+  })
 }
 
 var w="external/media.invitestory.in/seashell-vows/src/assets/watercolor-lantern.png",
@@ -351,7 +351,7 @@ function E(){
       let n=t<8?"far":t<17?"middle":"near",r=n==="far"?.3:n==="middle"?.58:.92;
       return{id:o.current++,x:5+Math.random()*90,drift:-90+Math.random()*180,tilt:-8+Math.random()*16,scale:r*(.78+Math.random()*.42),duration:n==="far"?7.4:n==="middle"?6.3:5.3,delay:Math.random()*1.4,blur:n==="far"?1.4:n==="middle"?.45:0,opacity:n==="far"?.54:n==="middle"?.78:1,depth:n}
     });
-    t(t=>[...t.slice(-44),...e]),a(`The sky is glowing for ${c.bride} and ${c.groom}.`),
+    t(t=>[...t.slice(-44),...e]),a(`The sky is glowing for ${c.shortBride??"Pallavi"} and ${c.shortGroom??"Sarvesh"}.`),
     window.setTimeout(()=>{let n=new Set(e.map(e=>e.id));t(e=>e.filter(e=>!n.has(e.id)))},9e3)
   }
   return(0,i.jsxs)("section",{className:"wish-sky relative isolate overflow-hidden px-6 py-20 text-center",children:[
@@ -386,7 +386,7 @@ function j(){
       (0,i.jsx)("img",{src:O,alt:"","aria-hidden":"true",loading:"lazy",width:1024,height:1024,className:"w-24 opacity-75"}),
       (0,i.jsx)("p",{className:"mt-4 script text-lg text-primary",children:"We cannot wait to celebrate with you"}),
       (0,i.jsxs)("h2",{className:"mt-4 font-display text-[2.35rem] sm:text-[2.65rem] leading-[1.05]",children:[
-        c.bride," ",(0,i.jsx)("span",{className:"script text-2xl text-primary",children:"&"})," ",c.groom
+        c.shortBride??"Pallavi"," ",(0,i.jsx)("span",{className:"script text-2xl text-primary",children:"&"})," ",c.shortGroom??"Sarvesh"
       ]}),
       (0,i.jsx)("p",{className:"mt-2 script text-xl text-primary font-medium tracking-wide",children:c.hashtag}),
       (0,i.jsxs)("div",{className:"mt-7 grid w-full max-w-sm grid-cols-2 border-y border-primary/25 py-4 text-left",children:[
@@ -437,7 +437,7 @@ function P(){
   return t?(0,i.jsxs)("div",{className:`invitation-opener fixed inset-0 z-[100] bg-background ${s?"is-closing":""}`,role:"dialog","aria-label":`Open ${c.bride} and ${c.groom}'s wedding invitation`,children:[
     (0,i.jsx)("video",{ref:e,src:(_wi.openerVideo??"./editable/assets/wedding-opener.mp4"),poster:M,preload:"auto",playsInline:!0,muted:!0,onEnded:u,className:"h-full w-full object-cover [transform:translateZ(0)]"}),
     !a&&(0,i.jsxs)("button",{type:"button",onClick:l,className:"absolute inset-0 flex w-full flex-col items-center justify-end bg-[linear-gradient(180deg,transparent_42%,rgba(25,29,38,0.58)_100%)] px-6 pb-14 text-center text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-white/80",children:[
-      (0,i.jsxs)("span",{className:"script text-2xl text-[#f4d8a1]",children:[c.bride," & ",c.groom]}),
+      (0,i.jsxs)("span",{className:"script text-2xl text-[#f4d8a1]",children:[_wc.displayNames??"Dr. Pallavi & Dr. Sarvesh"]}),
       (0,i.jsx)("span",{className:"mt-3 border-b border-white/60 pb-1 text-[0.68rem] uppercase tracking-[0.24em]",children:"Tap to open"})
     ]})
   ]}):null
