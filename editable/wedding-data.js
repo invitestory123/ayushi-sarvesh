@@ -17,8 +17,9 @@ window.WEDDING_DATA = {
   },
 
   footer: {
-    parents: "Dr BK Purohit & Dr Sujata Hota",
-    withLove: "With love from Purohit family",
+    invitationNote: "Eagerly waiting to celebrate with you, best regards & love from",
+    hosts: "Dr BK Purohit & Dr Sujata Hota",
+    family: "& Purohit family",
   },
 
   family: {
@@ -35,7 +36,7 @@ window.WEDDING_DATA = {
       name: "Dr. Sarvesh Kumar Singh",
       title: "The Groom",
       father: "Anil Kumar Singh",
-      mother: "Late Sarswati Singh",
+      mother: "Late Saraswati Singh",
       portrait: "./editable/assets/groom-portrait.jpg",
     },
   },

@@ -290,7 +290,7 @@ function CoupleIntroSection(){
   return(0,i.jsxs)("section",{className:"relative px-6 pb-16",children:[
     (0,i.jsx)(x,{children:(0,i.jsx)(C,{overline:"The Healers In Love",title:"Bride & Groom"})}),
     (0,i.jsxs)(x,{delay:60,children:[
-      (0,i.jsx)("p",{className:"text-center script text-2xl text-primary font-medium",children:c.hashtag}),
+      (0,i.jsx)("p",{className:"text-center script hashtag-script text-primary font-medium",children:c.hashtag}),
       (0,i.jsx)("p",{className:"mx-auto mt-3 max-w-md text-center text-sm leading-relaxed text-foreground/80",children:"From saving lives side-by-side in the Operation Theatre to uniting their hearts in sacred wedding vows, two compassionate doctors begin their greatest journey of love."})
     ]}),
     (0,i.jsxs)("div",{className:"mt-8 space-y-6",children:[
@@ -310,7 +310,7 @@ function CoupleIntroSection(){
         (0,i.jsx)("span",{className:"badge-day mb-2",children:"The Groom"}),
         (0,i.jsx)("h3",{className:"font-display text-2xl text-foreground",children:"Dr. Sarvesh Kumar Singh"}),
         (0,i.jsxs)("div",{className:"mt-4 border-t border-primary/15 pt-4 text-xs leading-relaxed text-foreground/85 space-y-1.5",children:[
-          (0,i.jsxs)("p",{children:[(0,i.jsx)("span",{className:"text-muted-foreground uppercase text-[0.6rem] tracking-wider block",children:"Parents"}),"Anil Kumar Singh & Late Sarswati Singh"]})
+          (0,i.jsxs)("p",{children:[(0,i.jsx)("span",{className:"text-muted-foreground uppercase text-[0.6rem] tracking-wider block",children:"Parents"}),`${_wf.groom?.father??"Anil Kumar Singh"} & ${_wf.groom?.mother??"Late Saraswati Singh"}`]})
         ]})
       ]})})
     ]})
@@ -384,11 +384,10 @@ function j(){
     (0,i.jsx)("img",{src:k,alt:"","aria-hidden":"true",loading:"lazy",width:1024,height:1536,className:"lantern-breathe pointer-events-none absolute -left-10 top-24 -z-10 w-28 opacity-70"}),
     (0,i.jsxs)("div",{className:"mx-auto flex max-w-lg flex-col items-center justify-start px-7 pt-12 pb-14 text-center",children:[
       (0,i.jsx)("img",{src:O,alt:"","aria-hidden":"true",loading:"lazy",width:1024,height:1024,className:"w-24 opacity-75"}),
-      (0,i.jsx)("p",{className:"mt-4 script text-lg text-primary",children:"We cannot wait to celebrate with you"}),
-      (0,i.jsxs)("h2",{className:"mt-4 font-display text-[2.35rem] sm:text-[2.65rem] leading-[1.05]",children:[
-        c.shortBride??"Pallavi"," ",(0,i.jsx)("span",{className:"script text-2xl text-primary",children:"&"})," ",c.shortGroom??"Sarvesh"
-      ]}),
-      (0,i.jsx)("p",{className:"mt-2 script text-xl text-primary font-medium tracking-wide",children:c.hashtag}),
+      (0,i.jsx)("p",{className:"mt-4 script text-lg sm:text-xl text-primary leading-relaxed max-w-sm",children:_wft.invitationNote??"Eagerly waiting to celebrate with you, best regards & love from"}),
+      (0,i.jsx)("h2",{className:"mt-3 font-display text-[1.8rem] sm:text-[2.2rem] leading-snug text-foreground font-medium",children:_wft.hosts??"Dr BK Purohit & Dr Sujata Hota"}),
+      (0,i.jsx)("p",{className:"mt-1 script text-xl sm:text-2xl text-primary font-medium",children:_wft.family??"& Purohit family"}),
+      (0,i.jsx)("p",{className:"mt-3 script hashtag-script text-primary font-medium",children:c.hashtag}),
       (0,i.jsxs)("div",{className:"mt-7 grid w-full max-w-sm grid-cols-2 border-y border-primary/25 py-4 text-left",children:[
         (0,i.jsxs)("div",{className:"border-r border-primary/25 pr-5",children:[
           (0,i.jsx)("p",{className:"text-xs text-muted-foreground",children:"The Wedding"}),
@@ -401,10 +400,7 @@ function j(){
       ]}),
       (0,i.jsx)("button",{type:"button",onClick:a,className:"press mt-7 min-h-[48px] rounded-sm border border-primary/45 bg-background/70 px-6 text-[0.66rem] uppercase tracking-[0.2em] text-foreground backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",children:"Copy invitation link"}),
       (0,i.jsx)("p",{"aria-live":"polite",className:"mt-3 min-h-5 text-xs text-muted-foreground",children:t}),
-      (0,i.jsxs)("div",{className:"mt-8 text-xs leading-relaxed text-foreground/70",children:[
-        (0,i.jsx)("p",{className:"font-medium text-foreground/85",children:_wft.parents??"Dr BK Purohit & Dr Sujata Hota"}),
-        (0,i.jsx)("p",{className:"mt-1",children:_wft.withLove??"With love from Purohit family"})
-      ]}),
+
       (0,i.jsx)("a",{href:"https://www.instagram.com/invitestory.in/",target:"_blank",rel:"noreferrer",className:"mt-6 text-[0.55rem] uppercase tracking-[0.18em] text-foreground/40 transition-colors hover:text-primary/70",children:"Follow @invitestory.in on Instagram"})
     ]})
   ]})
