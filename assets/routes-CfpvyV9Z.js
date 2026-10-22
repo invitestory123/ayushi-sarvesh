@@ -118,7 +118,8 @@ var c={
   tagline:_wc.tagline??"#FromOTTableToWeddingVows",
   hashtag:_wc.hashtag??"#FromOTTableToWeddingVows",
   dateLabel:_ww.dateLabel??"8 – 9 December 2026",
-  weddingISO:_ww.weddingISO??"2026-12-09T18:30:00+05:30"
+  weddingISO:_ww.weddingISO??"2026-12-09T18:30:00+05:30",
+  story:_wc.story??"From saving lives side-by-side in the Operation Theatre to uniting their hearts in sacred wedding vows, two compassionate doctors begin their journey of life."
 };
 
 var l=_w.events??[
@@ -126,7 +127,8 @@ var l=_w.events??[
   {name:"Engagement",day:"Day 1 (8 Dec)",glyph:"💍",date:"8 Dec 2026",time:"4:30 PM – 5:30 PM (with high tea)",venue:"Garden Area",dressCode:"Pastel Indo Western/Indian",note:"Two rings, two hearts & sunset high tea.",caricature:"./editable/assets/caricature-engagement.jpg"},
   {name:"Sangeet",day:"Day 1 (8 Dec)",glyph:"✧",date:"8 Dec 2026",time:"7:30 PM onwards (dinner)",venue:"Kalinga Hall",dressCode:"Bling Indo Western/Indian",note:"A night of dance, music & celebratory dinner.",caricature:"./editable/assets/caricature-sangeet.jpg"},
   {name:"Haldi",day:"Day 2 (9 Dec)",glyph:"❋",date:"9 Dec 2026",time:"10:00 AM – 1:00 PM",venue:"Pool Side",dressCode:"Shades of Yellow Indo Western/Indian",note:"Sunshine, turmeric laughter & poolside splashes.",caricature:"./editable/assets/caricature-haldi.jpg"},
-  {name:"Wedding & Reception",day:"Day 2 (9 Dec)",glyph:"☀",date:"9 Dec 2026",time:"6:30 PM onwards",venue:"Garden Area (Varmala & wedding)",dressCode:"Traditional Indian",note:"Varmala at 8pm and wedding at 10:30 PM",caricature:"./editable/assets/caricature-wedding.jpg"}
+  {name:"Wedding & Reception",day:"Day 2 (9 Dec)",glyph:"☀",date:"9 Dec 2026",time:"6:30 PM onwards",venue:"Garden Area (Varmala & wedding)",dressCode:"Traditional Indian",note:"Varmala at 8pm and wedding at 10:30 PM",caricature:"./editable/assets/caricature-wedding.jpg"},
+  {name:"Farewell Breakfast",day:"Day 3 (10 Dec)",glyph:"☕",date:"10 Dec 2026",time:"8:30 AM – 10:30 AM",venue:"Empires Beachfront",dressCode:"Comfortable / Casual",note:"A final breakfast, warm hugs, and memories to cherish forever. Followed by checkout at 10:30am",caricature:"./editable/assets/caricature-farewell-breakfast.jpg"}
 ];
 
 var u={
@@ -291,7 +293,7 @@ function CoupleIntroSection(){
     (0,i.jsx)(x,{children:(0,i.jsx)(C,{overline:"The Healers In Love",title:"Bride & Groom"})}),
     (0,i.jsxs)(x,{delay:60,children:[
       (0,i.jsx)("p",{className:"text-center script hashtag-script text-primary font-medium",children:c.hashtag}),
-      (0,i.jsx)("p",{className:"mx-auto mt-3 max-w-md text-center text-sm leading-relaxed text-foreground/80",children:"From saving lives side-by-side in the Operation Theatre to uniting their hearts in sacred wedding vows, two compassionate doctors begin their greatest journey of love."})
+      (0,i.jsx)("p",{className:"mx-auto mt-3 max-w-md text-center text-sm leading-relaxed text-foreground/80",children:c.story})
     ]}),
     (0,i.jsxs)("div",{className:"mt-8 space-y-6",children:[
       /* 1. BRIDE DETAILS FIRST */
@@ -321,7 +323,7 @@ function CoupleIntroSection(){
 function CaricaturesSection(){
   return(0,i.jsx)("section",{className:"relative px-6 pb-16",children:
     (0,i.jsx)("div",{className:"space-y-8",children:l.map((e,t)=>(0,i.jsx)(x,{delay:t*80,children:(0,i.jsxs)("article",{className:"card-soft caricature-gallery-card overflow-hidden rounded-lg border border-primary/20 shadow-sm",children:[
-      (0,i.jsx)("div",{className:"relative aspect-[4/3] w-full overflow-hidden bg-muted",children:(0,i.jsx)("img",{src:e.caricature,alt:`${e.name} caricature illustration`,loading:"lazy",width:800,height:600,className:"h-full w-full object-cover transition-transform duration-500 hover:scale-105"})}),
+      e.caricature?(0,i.jsx)("div",{className:"relative aspect-[4/3] w-full overflow-hidden bg-muted",children:(0,i.jsx)("img",{src:e.caricature,alt:`${e.name} caricature illustration`,loading:"lazy",width:800,height:600,className:"h-full w-full object-cover transition-transform duration-500 hover:scale-105"})}):null,
       (0,i.jsxs)("div",{className:"p-5",children:[
         (0,i.jsxs)("div",{className:"flex items-center justify-between gap-2",children:[
           (0,i.jsxs)("div",{className:"flex items-center gap-2",children:[
@@ -334,7 +336,7 @@ function CaricaturesSection(){
           (0,i.jsxs)("p",{className:"flex items-center gap-1.5 font-medium",children:[(0,i.jsx)("span",{className:"text-primary",children:"📅"}),`${e.date} · ${e.time}`]}),
           (0,i.jsxs)("p",{className:"flex items-center gap-1.5",children:[(0,i.jsx)("span",{className:"text-primary",children:"📍"}),e.venue]})
         ]}),
-        (0,i.jsx)("div",{className:"mt-3 pt-2.5 border-t border-primary/10 flex flex-wrap items-center justify-between gap-2",children:(0,i.jsxs)("span",{className:"badge-dress",children:[(0,i.jsx)("span",{children:"✨"}),`Dress Code: ${e.dressCode}`]})}),
+        e.dressCode?(0,i.jsx)("div",{className:"mt-3 pt-2.5 border-t border-primary/10 flex flex-wrap items-center justify-between gap-2",children:(0,i.jsxs)("span",{className:"badge-dress",children:[(0,i.jsx)("span",{children:"✨"}),`Dress Code: ${e.dressCode}`]})}):null,
         (0,i.jsx)("p",{className:"mt-2.5 text-xs italic text-muted-foreground",children:e.note})
       ]})
     ]})},e.name))})

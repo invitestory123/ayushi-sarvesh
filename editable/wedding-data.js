@@ -14,6 +14,7 @@ window.WEDDING_DATA = {
     shortGroom: "Sarvesh",
     invitationPreamble: "Together with our families,",
     invitationSubtitle: "We invite you to bless us and celebrate our wedding",
+    story: "From saving lives side-by-side in the Operation Theatre to uniting their hearts in sacred wedding vows, two compassionate doctors begin their journey of life.",
   },
 
   footer: {
@@ -115,6 +116,17 @@ window.WEDDING_DATA = {
       note: "Varmala at 8pm and wedding at 10:30 PM",
       caricature: "./editable/assets/caricature-wedding.jpg",
     },
+    {
+      name: "Farewell Breakfast",
+      day: "Day 3",
+      glyph: "☕",
+      date: "10 Dec 2026",
+      time: "8:30 AM – 10:30 AM",
+      venue: "Empires Beachfront",
+      dressCode: "Comfortable / Casual",
+      note: "A final breakfast, warm hugs, and memories to cherish forever. Followed by checkout at 10:30am",
+      caricature: "./editable/assets/caricature-farewell-breakfast.jpg",
+    },
   ],
 
   eventDates: {
@@ -123,6 +135,7 @@ window.WEDDING_DATA = {
     Sangeet: "2026-12-08T19:30:00+05:30",
     Haldi: "2026-12-09T10:00:00+05:30",
     "Wedding & Reception": "2026-12-09T18:30:00+05:30",
+    "Farewell Breakfast": "2026-12-10T08:30:00+05:30",
   },
 
   music: {
