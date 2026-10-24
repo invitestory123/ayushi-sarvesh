@@ -18,8 +18,13 @@ Edit `couple` in `editable/wedding-data.js`:
 Edit `wedding`, `events`, and `eventDates` in `editable/wedding-data.js`:
 - `dateLabel`: Display date for hero/footer (e.g. `"Saturday, 14 February 2026"`)
 - `weddingISO`: ISO 8601 timestamp for primary ceremony
-- `events[]`: Array of celebrations (Haldi, Mehendi, Sangeet, Wedding, Reception) with name, glyph, date, time, venue, and note
+- `events[]`: Array of celebrations (Haldi, Mehendi, Sangeet, Wedding, Reception) with name, glyph, date, time, venue, dress code, and note
 - `eventDates`: Key-value map of ISO timestamps for generating multi-event calendar entries
+
+### Moments & Caricature Gallery
+Edit `moments[]` in `editable/wedding-data.js`:
+- Displays each event's caricature illustration as a dedicated "Moments" visual gallery near the end of the invitation.
+- Items contain `name`, `day`, `glyph`, `date`, `src`, and `note`.
 
 ### Venue & Maps
 Edit `venue` in `editable/wedding-data.js`:
